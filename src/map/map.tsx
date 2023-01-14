@@ -1,9 +1,8 @@
 import { MapContainer, Polyline, TileLayer } from "react-leaflet";
+import { pathOptions } from "../constants/map-constants";
 import { mapData } from "../constants/map-data";
 import LeafletMarker from "./markers";
 import { getAllPathPosition } from "./pathPosition";
-
-const redOptions = { color: "red" };
 
 function LeafletMap() {
   const { hub, locations } = mapData;
@@ -27,7 +26,7 @@ function LeafletMap() {
               displayName={`${location.address}`}
             />
           ))}
-        <Polyline pathOptions={redOptions} positions={polylineOptions} />
+        <Polyline pathOptions={pathOptions} positions={polylineOptions} />
       </MapContainer>
     </div>
   );
