@@ -1,10 +1,9 @@
-import LeafletMap from './map/map';
+import LeafletMap from "./map/map";
 
 function App() {
-
   return (
     <div className="App">
-      <LeafletMap/>
+      <LeafletMap />
     </div>
   );
 }
