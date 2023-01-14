@@ -1,4 +1,4 @@
-import LeafletMap from './Map/map';
+import LeafletMap from './map/map';
 
 function App() {
 
