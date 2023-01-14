@@ -10,7 +10,7 @@ function LeafletMap() {
   const polylineOptions = getAllPathPosition(hub, locations);
 
   return (
-    <div className="App">
+    <div>
       <MapContainer
         center={{ lat: hub.lat, lng: hub.lon }}
         zoom={10}
@@ -22,6 +22,7 @@ function LeafletMap() {
         {locations &&
           locations.map((location: any) => (
             <LeafletMarker
+              key={`${location.address}`}
               location={location}
               displayName={`${location.address}`}
             />
