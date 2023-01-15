@@ -6,8 +6,11 @@ The component simply loads the current user's location and redirects it to the p
 
 **react-leaflet** : display map component 
 
-
 ## Available Scripts
+
+### `npm install` 
+
+install all the dependencies and packaged required for the project 
 
 ### `npm start`
 
