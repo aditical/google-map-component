@@ -1,12 +1,14 @@
 import { MapContainer, TileLayer } from "react-leaflet";
+import { mapSettings } from "../constants/map-constants";
 import LocationMarker from "./locationMarker";
 
 function LeafletMap() {
+  const { center, zoomLevel } = mapSettings;
   return (
     <div>
       <MapContainer
-        center={[49.1951, 16.6068]}
-        zoom={10}
+        center={center}
+        zoom={zoomLevel}
         scrollWheelZoom={false}
         style={{ height: "100vh" }}
       >
