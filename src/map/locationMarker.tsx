@@ -4,11 +4,10 @@ import { pathOptions } from "../constants/map-constants";
 import { mapData } from "../constants/map-data";
 import LeafletMarker from "./marker";
 import { getAllPathPosition } from "./pathPosition";
+import ILocation from "../interfaces/ILocation";
 
 export default function LocationMarker() {
-  const [position, setPosition] = useState<null | { lat: number; lon: number }>(
-    null
-  );
+  const [position, setPosition] = useState<null | ILocation>(null);
   const { hub, locations } = mapData;
   const polylineOptions = getAllPathPosition(hub, locations);
 

@@ -1,4 +1,6 @@
-export function getLatLongAsArrayElements(place: { lat: number; lon: number }) {
+import ILocation from "../interfaces/ILocation";
+
+export function getLatLongAsArrayElements(place: ILocation) {
   const latLonOnArrayElem = [place.lat, place.lon];
   return latLonOnArrayElem;
 }

@@ -1,7 +1,8 @@
 import { Marker, Popup } from "react-leaflet";
+import ILocation from "../interfaces/ILocation";
 
 export default function LeafletMarker(props: {
-  location: { lat: number; lon: number };
+  location: ILocation;
   displayName: string;
 }) {
   const { location, displayName } = props;
