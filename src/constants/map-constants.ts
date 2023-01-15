@@ -1,4 +1,5 @@
 import ILocation from "../interfaces/ILocation";
+import IMapSettings from "../interfaces/IMapSettings";
 
 export function getLatLongAsArrayElements(place: ILocation) {
   const latLonOnArrayElem = [place.lat, place.lon];
@@ -9,7 +10,7 @@ export const pathOptions = {
   color: "red",
 };
 
-export const mapSettings: { center: [number, number]; zoomLevel: number } = {
+export const mapSettings: IMapSettings = {
   center: [49.1951, 16.6068],
   zoomLevel: 10,
 };
