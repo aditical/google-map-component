@@ -16,7 +16,9 @@ export default function LocationMarker() {
   useEffect(() => {
     map.locate().on("locationfound", function (e) {
       setPosition({ lat: e.latlng.lat, lon: e.latlng.lng });
+      //to set the user's current location
       map.setView(e.latlng, map.getZoom());
+      //redirect the user to the hub location
       const hubLatLon = { lat: hub.lat, lng: hub.lon };
       map.flyTo(hubLatLon, map.getZoom());
     });
