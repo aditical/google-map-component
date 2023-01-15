@@ -1,33 +1,17 @@
-import { MapContainer, Polyline, TileLayer } from "react-leaflet";
-import { pathOptions } from "../constants/map-constants";
-import { mapData } from "../constants/map-data";
-import LeafletMarker from "./markers";
-import { getAllPathPosition } from "./pathPosition";
+import { MapContainer, TileLayer } from "react-leaflet";
+import LocationMarker from "./locationMarker";
 
 function LeafletMap() {
-  const { hub, locations } = mapData;
-
-  const polylineOptions = getAllPathPosition(hub, locations);
-
   return (
     <div>
       <MapContainer
-        center={{ lat: hub.lat, lng: hub.lon }}
+        center={[49.1951, 16.6068]}
         zoom={10}
         scrollWheelZoom={false}
         style={{ height: "100vh" }}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <LeafletMarker location={hub} displayName="Hub" />
-        {locations &&
-          locations.map((location: any) => (
-            <LeafletMarker
-              key={`${location.address}`}
-              location={location}
-              displayName={`${location.address}`}
-            />
-          ))}
-        <Polyline pathOptions={pathOptions} positions={polylineOptions} />
+        <LocationMarker />
       </MapContainer>
     </div>
   );
