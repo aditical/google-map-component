@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer } from "react-leaflet";
-import { mapSettings } from "../constants/map-constants";
+import { mapSettings, mapStyles } from "../constants/map-constants";
 import LocationMarker from "./locationMarker";
 
 function LeafletMap() {
@@ -10,7 +10,7 @@ function LeafletMap() {
         center={center}
         zoom={zoomLevel}
         scrollWheelZoom={false}
-        style={{ height: "100vh" }}
+        style={mapStyles}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <LocationMarker />
